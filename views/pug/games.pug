@@ -1,0 +1,22 @@
+extends partials/layout
+
+block scripts
+  script(src="/games-list.js" defer)
+
+block append nav
+
+block layout-content
+  button#new-game-btn Add New Game
+  include partials/new-game-form
+  main.items-container
+    each game in gamesList
+      article.item
+        div.text
+          h3 #{game.id}: #{game.name}
+          p #{game.release_year}
+          p Platform:
+            a(href=`/games?attribute=platform&value=${game.platform}`) #{game.platform}
+          p Genre: #{game.genre}
+          p Publisher: #{game.publisher}
+          a(href=`/games/${game.id}` )
+            button View
