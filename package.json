@@ -1,4 +1,8 @@
 {
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "better-sqlite3": "^11.5.0",
     "ejs": "^3.1.10",
