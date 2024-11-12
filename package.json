@@ -4,6 +4,8 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
     "better-sqlite3": "^11.5.0",
     "ejs": "^3.1.10",
     "express": "^4.21.1",
